@@ -24,6 +24,13 @@ export async function POST(request: NextRequest) {
     );
   }
 
+  // Debug: log the full payload structure
+  console.log('[WEBHOOK] Keys:', Object.keys(verified));
+  console.log('[WEBHOOK] id:', verified.id);
+  console.log('[WEBHOOK] status:', verified.status);
+  console.log('[WEBHOOK] metadata:', JSON.stringify(verified.metadata));
+  console.log('[WEBHOOK] object keys:', verified.object ? Object.keys(verified.object) : 'no object field');
+
   // Dashboard webhooks wrap the payment in { type, object }
   // callbackUrl webhooks send the payment directly
   const payment = verified.object || verified;
