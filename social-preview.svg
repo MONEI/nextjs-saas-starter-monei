@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0a"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f97316"/>
+      <stop offset="100%" style="stop-color:#fb923c"/>
+    </linearGradient>
+    <linearGradient id="card-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.08"/>
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.03"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="640" fill="url(#bg)"/>
+
+  <!-- Subtle grid pattern -->
+  <g opacity="0.04">
+    <line x1="0" y1="80" x2="1280" y2="80" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="160" x2="1280" y2="160" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="240" x2="1280" y2="240" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="320" x2="1280" y2="320" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="400" x2="1280" y2="400" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="480" x2="1280" y2="480" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="560" x2="1280" y2="560" stroke="white" stroke-width="1"/>
+    <line x1="160" y1="0" x2="160" y2="640" stroke="white" stroke-width="1"/>
+    <line x1="320" y1="0" x2="320" y2="640" stroke="white" stroke-width="1"/>
+    <line x1="480" y1="0" x2="480" y2="640" stroke="white" stroke-width="1"/>
+    <line x1="640" y1="0" x2="640" y2="640" stroke="white" stroke-width="1"/>
+    <line x1="800" y1="0" x2="800" y2="640" stroke="white" stroke-width="1"/>
+    <line x1="960" y1="0" x2="960" y2="640" stroke="white" stroke-width="1"/>
+    <line x1="1120" y1="0" x2="1120" y2="640" stroke="white" stroke-width="1"/>
+  </g>
+
+  <!-- Orange glow -->
+  <circle cx="200" cy="320" r="300" fill="#f97316" opacity="0.06"/>
+  <circle cx="1080" cy="320" r="250" fill="#f97316" opacity="0.04"/>
+
+  <!-- Left content -->
+  <g transform="translate(80, 120)">
+    <!-- MONEI badge -->
+    <rect x="0" y="0" width="110" height="32" rx="16" fill="url(#accent)"/>
+    <text x="55" y="21" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="white" text-anchor="middle">MONEI</text>
+
+    <!-- Title -->
+    <text x="0" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="52" font-weight="800" fill="white" letter-spacing="-1">
+      Next.js SaaS Starter
+    </text>
+    <text x="0" y="148" font-family="system-ui, -apple-system, sans-serif" font-size="52" font-weight="800" fill="url(#accent)" letter-spacing="-1">
+      with MONEI Payments
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="200" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#a0a0a0" letter-spacing="0.3">
+      Postgres · Drizzle ORM · shadcn/ui · No Stripe required
+    </text>
+
+    <!-- Payment method pills -->
+    <g transform="translate(0, 240)">
+      <rect x="0" y="0" width="80" height="34" rx="17" fill="url(#card-bg)" stroke="#ffffff20" stroke-width="1"/>
+      <text x="40" y="22" font-family="system-ui, sans-serif" font-size="13" fill="#d0d0d0" text-anchor="middle">Cards</text>
+
+      <rect x="92" y="0" width="82" height="34" rx="17" fill="url(#card-bg)" stroke="#ffffff20" stroke-width="1"/>
+      <text x="133" y="22" font-family="system-ui, sans-serif" font-size="13" fill="#d0d0d0" text-anchor="middle">Bizum</text>
+
+      <rect x="186" y="0" width="82" height="34" rx="17" fill="url(#card-bg)" stroke="#ffffff20" stroke-width="1"/>
+      <text x="227" y="22" font-family="system-ui, sans-serif" font-size="13" fill="#d0d0d0" text-anchor="middle">PayPal</text>
+
+      <rect x="280" y="0" width="110" height="34" rx="17" fill="url(#card-bg)" stroke="#ffffff20" stroke-width="1"/>
+      <text x="335" y="22" font-family="system-ui, sans-serif" font-size="13" fill="#d0d0d0" text-anchor="middle">Apple Pay</text>
+
+      <rect x="402" y="0" width="120" height="34" rx="17" fill="url(#card-bg)" stroke="#ffffff20" stroke-width="1"/>
+      <text x="462" y="22" font-family="system-ui, sans-serif" font-size="13" fill="#d0d0d0" text-anchor="middle">Google Pay</text>
+    </g>
+  </g>
+
+  <!-- Right side: code preview card -->
+  <g transform="translate(750, 130)">
+    <rect x="0" y="0" width="450" height="380" rx="12" fill="#111118" stroke="#ffffff12" stroke-width="1"/>
+
+    <!-- Terminal header -->
+    <rect x="0" y="0" width="450" height="40" rx="12" fill="#1a1a24"/>
+    <rect x="0" y="28" width="450" height="12" fill="#1a1a24"/>
+    <circle cx="20" cy="20" r="5" fill="#ff5f57"/>
+    <circle cx="38" cy="20" r="5" fill="#febc2e"/>
+    <circle cx="56" cy="20" r="5" fill="#28c840"/>
+    <text x="225" y="24" font-family="monospace" font-size="12" fill="#666" text-anchor="middle">lib/payments/monei.ts</text>
+
+    <!-- Code lines -->
+    <g transform="translate(20, 60)" font-family="'SF Mono', 'Fira Code', monospace" font-size="13">
+      <text y="0" fill="#c792ea">import</text><text y="0" x="52" fill="#a0a0a0"> { Monei } </text><text y="0" x="140" fill="#c792ea">from</text><text y="0" x="172" fill="#c3e88d"> '@monei-js/node-sdk'</text>
+
+      <text y="28" fill="#666">// Plans defined locally</text>
+
+      <text y="56" fill="#c792ea">export const</text><text y="56" x="105" fill="#82aaff"> PLANS</text><text y="56" x="155" fill="#a0a0a0">: Plan[] = [</text>
+
+      <text y="84" fill="#a0a0a0">  { id: </text><text y="84" x="55" fill="#c3e88d">'base'</text><text y="84" x="100" fill="#a0a0a0">, price: </text><text y="84" x="165" fill="#f78c6c">800</text><text y="84" x="190" fill="#a0a0a0"> },</text>
+
+      <text y="112" fill="#a0a0a0">  { id: </text><text y="112" x="55" fill="#c3e88d">'plus'</text><text y="112" x="100" fill="#a0a0a0">, price: </text><text y="112" x="165" fill="#f78c6c">1200</text><text y="112" x="198" fill="#a0a0a0"> },</text>
+
+      <text y="140" fill="#a0a0a0">]</text>
+
+      <text y="176" fill="#666">// Checkout → hosted page → token</text>
+
+      <text y="204" fill="#c792ea">const</text><text y="204" x="42" fill="#a0a0a0"> payment = </text><text y="204" x="130" fill="#c792ea">await</text><text y="204" x="172" fill="#82aaff"> monei</text>
+
+      <text y="232" fill="#a0a0a0">  .payments.</text><text y="232" x="90" fill="#82aaff">create</text><text y="232" x="138" fill="#a0a0a0">({</text>
+
+      <text y="260" fill="#a0a0a0">    amount, currency, </text><text y="260" x="160" fill="#f78c6c">generatePaymentToken</text><text y="260" x="340" fill="#a0a0a0">:</text><text y="260" x="348" fill="#ff5370"> true</text>
+
+      <text y="288" fill="#a0a0a0">  })</text>
+    </g>
+  </g>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="610" width="1280" height="30" fill="#f97316" opacity="0.9"/>
+  <text x="640" y="629" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="white" text-anchor="middle" letter-spacing="1">
+    github.com/MONEI/nextjs-saas-starter-monei
+  </text>
+</svg>
