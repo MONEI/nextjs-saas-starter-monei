@@ -171,7 +171,7 @@ export async function handlePaymentWebhook(payment: any) {
       try {
         await monei.payments.refund(paymentId, {
           amount: payment.amount,
-          refundReason: 'Demo — automatic refund',
+          refundReason: 'requested_by_customer' as any,
         });
         console.log(`[DEMO] Auto-refunded payment ${paymentId} (€${(payment.amount / 100).toFixed(2)})`);
       } catch (err) {
