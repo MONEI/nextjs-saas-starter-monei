@@ -1,4 +1,4 @@
-import { checkoutAction } from '@/lib/payments/actions';
+import { guestCheckoutAction } from '@/lib/payments/actions';
 import { Check } from 'lucide-react';
 import { PLANS, Plan } from '@/lib/payments/monei';
 import { SubmitButton } from './submit-button';
@@ -38,7 +38,7 @@ function PricingCard({ plan }: { plan: Plan }) {
           </li>
         ))}
       </ul>
-      <form action={checkoutAction}>
+      <form action={guestCheckoutAction}>
         <input type="hidden" name="planId" value={plan.id} />
         <SubmitButton />
       </form>
