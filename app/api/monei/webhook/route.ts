@@ -12,10 +12,10 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  let payment: any;
+  let verified: any;
 
   try {
-    payment = verifyMoneiSignature(payload, signature);
+    verified = verifyMoneiSignature(payload, signature);
   } catch (err) {
     console.error('Webhook signature verification failed.', err);
     return NextResponse.json(
@@ -23,6 +23,10 @@ export async function POST(request: NextRequest) {
       { status: 401 }
     );
   }
+
+  // Dashboard webhooks wrap the payment in { type, object }
+  // callbackUrl webhooks send the payment directly
+  const payment = verified.object || verified;
 
   try {
     await handlePaymentWebhook(payment);
